@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">My ↓DW\' Movie</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_add_new_movie">Add Movie Item</string>
+    <string name="add_new_movie">Add Movie</string>
+    <string name="refr">Refresh</string>
+    <string name="edit">Edit</string>
+    <string name="quit_app">QuitApp</string>
+    <string name="app">MyMovieList2015</string>
+    <string name="action_settings">Setting</string>
+    <string name="placeholder">Place Holder!</string>
+    <string name="label_Movie_Key">Movie Name : </string>
+    <string name="label_Movie_Title">Movie Title: </string>
+    <string name="label_Movie_Type">Select Type of Movie : </string>
+    <string name="label_Movie_Story">Story Outline : </string>
+    <string name="label_Movie_Rating">Select Movie Rating : </string>
+    <string name="label_Movie_Language">Language : </string>
+    <string name="label_Movie_RunTime">Running Time in Minutes : </string>
+    <string name="movie_Type_Prompt">Choose a Type of Movie : </string>
+    <string name="movie_Rating_Prompt">Choose a Rating for a Movie : </string>
+    <string name="title_activity_add_movie">AddMovie</string>
+    <string name="movieKey">Movie Key</string>
+    <string name="movieTitle">Movie Title :</string>
+    <string name="movieType">Movie Type</string>
+    <string name="movieStory">Movie Story outline</string>
+    <string name="movieRating">Move Rating</string>
+    <string name="movieLanguage">Movie Language Support</string>
+    <string name="movieRunTime">Movie Running time in Minutes</string>
+    <string name="tvMovieDetails">Movie Details</string>
+    <string name="hintKey">Enter Movie Title in Short words</string>
+    <string name="hintTitle">Enter Full Movie title</string>
+    <string name="hintStory">Enter Story outline of the Movie</string>
+    <string name="hintLang">Enter types of language movie is available</string>
+        <string name="hintRunTime">Enter running time in minutes</string>
+    <string name="head">New Movie Entry Form</string>
+
+</resources>

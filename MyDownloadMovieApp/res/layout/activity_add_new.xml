@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#0e92d2"
+        android:gravity="start"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textviewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="11dp"
+            android:text="@string/head"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#eaeff4"
+            android:textStyle="bold" >
+        </TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#c0c0c0" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#0f1e2d"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp" >
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#033973"
+                android:onClick="onClick"
+                android:paddingEnd="8dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
+                android:paddingStart="8dp"
+                android:paddingRight="8dp"
+                android:text="Save"
+                android:textColor="#93b770"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#033973"
+                android:onClick="onClick"
+              android:layout_marginRight="3dp"
+                android:layout_marginEnd="3dp"
+                android:text="Reset"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#033973"
+                android:onClick="onClick"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:paddingRight="8dp"
+                android:text="Cancel"
+                android:textColor="#f36b7f"
+                android:textStyle="bold" />
+        </LinearLayout>
+           
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/buttons" >
+
+            <!-- Scrollable content here -->
+            <!-- Movie Name  start -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#0f1e2d"
+                android:gravity="start"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/label_Movie_Key"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/label_Movie_Key"
+                    android:textColor="#d6e0ea" 
+                    android:textStyle="bold" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editTextKey"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:hint="@string/hintKey"
+                    android:inputType="text">
+                </EditText>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0" 
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"/>
+                <!-- Movie name ends -->
+
+
+                <!-- ovie title Starts -->
+
+                <TextView
+                    android:id="@+id/label_Movie_Title"
+                     android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/label_Movie_Title"
+                    android:textColor="#d6e0ea"
+                    android:textStyle="bold"  >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editTextMovieTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:hint="@string/hintTitle"
+                    android:lines="5" >
+                </EditText>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp" />
+                <!-- Movie Title ends -->
+
+
+                <!-- Movie Type starts -->
+
+                <TextView
+                    android:id="@+id/label_Movie_Type"
+                     android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/label_Movie_Type"
+                    android:textColor="#d6e0ea" 
+                    android:textStyle="bold" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerMovieType"
+                      android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:entries="@array/movieType"
+                    android:prompt="@string/movie_Type_Prompt" >
+                </Spinner>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp" />
+                <!-- Movie type ends -->
+
+
+                <!-- Movie Story outline starts -->
+
+                <TextView
+                    android:id="@+id/label_Movie_Story"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/label_Movie_Story"
+                    android:textColor="#d6e0ea" 
+                    android:textStyle="bold" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editTextMovieStory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:hint="@string/hintStory"
+                    android:inputType="textMultiLine"
+                    android:lines="5" >
+                </EditText>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0" 
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"/>
+
+                <!-- Movie story outline  ends -->
+
+
+                <!-- Movie Rating starts -->
+
+                <TextView
+                    android:id="@+id/label_Movie_Rating"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/label_Movie_Rating"
+                    android:textColor="#d6e0ea" >
+                </TextView>
+
+                <Spinner
+                    android:id="@+id/spinnerMovieRating"
+                     android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:entries="@array/movieRating"
+                    android:prompt="@string/movie_Rating_Prompt" >
+                </Spinner>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp" />
+                <!-- Movie rating ends -->
+
+
+                <!-- Movie language starts -->
+
+                <TextView
+                    android:id="@+id/label_Movie_Language"
+                     android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/label_Movie_Language"
+                    android:textColor="#d6e0ea"
+                    android:textStyle="bold"  >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editTextMovieLanguage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:hint="@string/hintLang"
+                    android:inputType="textMultiLine"
+                    android:lines="5" >
+                </EditText>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp" />
+
+                <!-- Movie  language  ends -->
+
+
+                <!-- Movie running time  starts -->
+
+                <TextView
+                    android:id="@+id/label_Movie_RunTime"
+                     android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/label_Movie_RunTime"
+                    android:textColor="#d6e0ea"
+                    android:textStyle="bold"  >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/editTextMovieRunTime"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ffffff"
+                    android:hint="@string/hintRunTime"
+                    android:inputType="number" >
+                </EditText>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#c0c0c0" 
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginStart="12dp"/>
+                <!-- Movie  running times  ends -->
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>
